@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -24,4 +25,6 @@ public class hello {
         return new Greeting(counter.incrementAndGet(),
                 String.format(template, name));
     }
+
+
 }

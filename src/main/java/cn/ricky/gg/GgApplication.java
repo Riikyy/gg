@@ -31,7 +31,7 @@ public class GgApplication {
     public CommandLineRunner run(RestTemplate restTemplate)throws Exception{
         return args -> {
             Quote quote=restTemplate.getForObject("https://gturnquist-quoters.cfapps.io/api/random",Quote.class);
-            log.info(quote.toString());
+            if(quote!=null)log.info(quote.toString());
         };
     }
 
